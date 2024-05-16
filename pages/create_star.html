@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DIY star</title>
+		<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+		<!-- Theme CSS -->
+		<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+		<!-- Demo CSS -->
+		<link type="text/css" href="../assets/css/demo.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../assets/css/star.css">
+		
+	</head>
+	<body>
+		<div class="row" style="background: #000;">
+			<div class="col-6">
+				<div class="float-left">
+					<a href="complete_info.html" class="text-uppercase">
+						next<i class="fas fa-arrow-right ml-2"></i>
+					</a>
+					<br>
+					<a href="#" id="save_star" class="text-uppercase">
+						save
+					</a>
+				</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="root"></div>
+		<script src="../assets/js/star.js"></script>
+		<script src="../assets/vendor/jquery/jquery.min.js"></script>
+		<script src="../assets/vendor/popper/popper.min.js"></script>
+		<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+		<!-- FontAwesome 5 -->
+		<script src="../assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+		<!-- Page plugins -->
+		<script src="../assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+		<script src="../assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+		<script src="../assets/vendor/input-mask/input-mask.min.js"></script>
+		<script src="../assets/vendor/nouislider/js/nouislider.min.js"></script>
+		<script src="../assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+		<!-- Theme JS -->
+		<script src="../assets/js/theme.js"></script>
+		<script src="../assets/js/html2canvas.min.js"></script>
+
+	</body>
+</html>
+<script>
+	$(document).ready(function() {
+		// canvas生成图片
+		$("#save_star").on("click", function() {
+			var getPixelRatio = function(context) { // 获取设备的PixelRatio
+				var backingStore = context.backingStorePixelRatio ||
+					context.webkitBackingStorePixelRatio ||
+					context.mozBackingStorePixelRatio ||
+					context.msBackingStorePixelRatio ||
+					context.oBackingStorePixelRatio ||
+					context.backingStorePixelRatio || 0.5;
+				return (window.devicePixelRatio || 0.5) / backingStore;
+			};
+			//生成的图片名称
+			var imgName = "star.jpg";
+			var shareContent = document.body;
+			var width = shareContent.offsetWidth;
+			var height = shareContent.offsetHeight;
+			var canvas = document.createElement("canvas");
+			var context = canvas.getContext('2d');
+			var scale = getPixelRatio(context); //将canvas的容器扩大PixelRatio倍，再将画布缩放，将图像放大PixelRatio倍。
+			canvas.width = width * scale;
+			canvas.height = height * scale;
+			canvas.style.width = width + 'px';
+			canvas.style.height = height + 'px';
+			context.scale(scale, scale);
+
+			var opts = {
+				//useCORS:true;
+				//allowTaint: true
+				scale: scale,
+				canvas: canvas,
+				width: width,
+				height: height,
+				dpi: window.devicePixelRatio
+			};
+			html2canvas(shareContent, opts).then(function(canvas) {
+				context.imageSmoothingEnabled = false;
+				context.webkitImageSmoothingEnabled = false;
+				context.msImageSmoothingEnabled = false;
+				context.imageSmoothingEnabled = false;
+				var dataUrl = canvas.toDataURL('image/jpeg', 1.0);
+				var xhr = new XMLHttpRequest();
+				//暂时没有相应的php
+				xhr.open('post', '../post_star.php');
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				xhr.send(dataUrl);
+				dataURIToBlob(imgName, dataUrl, callback);
+			});
+		});
+	})
+
+
+	var dataURIToBlob = function(imgName, dataURI, callback) {
+		var binStr = atob(dataURI.split(',')[1]),
+			len = binStr.length,
+			arr = new Uint8Array(len);
+
+		for (var i = 0; i < len; i++) {
+			arr[i] = binStr.charCodeAt(i);
+		}
+
+		callback(imgName, new Blob([arr]));
+	}
+
+	var callback = function(imgName, blob) {
+		var triggerDownload = $("<a>").attr("href", URL.createObjectURL(blob)).attr("download", imgName).appendTo(
+			"body").on("click", function() {
+			if (navigator.msSaveBlob) {
+				return navigator.msSaveBlob(blob, imgName);
+			}
+		});
+		triggerDownload[0].click();
+		triggerDownload.remove();
+	};
+</script>

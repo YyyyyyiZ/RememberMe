@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery拖拽表单元素布局插件</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+		<link href="../assets/css/form/fileinput.min.css" rel="stylesheet">
+		<link href="../assets/css/form/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		<link href="../assets/css/form/animate.min.css" rel="stylesheet">
+		<link href="../assets/css/form/summernote.css" rel="stylesheet">
+		<link href="../assets/css/form/style.min862f.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../assets/css/form/index.css">
+		
+	</head>
+	<body style="background-color:#f7f5f6;">
+		<div class="col-md-12">
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">头像：</label>
+		        <div class="col-sm-7">
+		            <div class="file-input file-input-new">
+		                <div class="input-group file-caption-main">
+		                    <div tabindex="500" class="form-control file-caption  kv-fileinput-caption">
+		                        <div class="file-caption-name"></div>
+		                    </div>
+		                    <div class="input-group-btn">
+		                        <div tabindex="500" class="btn btn-primary btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;
+		                            <input class="file uploadfile" type="file" multiple="" data-min-file-count="1" id="1657852755571">
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">姓名：</label>
+		        <div class="col-sm-7">
+		            <input type="text" class="form-control" placeholder="">
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">性别：</label>
+		        <div class="col-sm-7">
+		            <select class="form-control"></select>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">民族：</label>
+		        <div class="col-sm-7">
+		            <input type="text" class="form-control" placeholder="">
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">籍贯：</label>
+		        <div class="col-sm-7">
+		            <form class="form-inline">
+		                <div class="distpicker">
+		                    <div class="form-group" style="margin:0px; padding-right:10px;">
+		                        <label class="sr-only" for="province10">Province</label>
+		                        <select class="form-control" id="province10"></select>
+		                    </div>
+		                    <div class="form-group" style="margin:0px; padding-right:10px;">
+		                        <label class="sr-only" for="city10">City</label>
+		                        <select class="form-control" id="city10"></select>
+		                    </div>
+		                    <div class="form-group" style="margin:0px; padding-right:10px;">
+		                        <label class="sr-only" for="district10">District</label>
+		                        <select class="form-control" id="district10"></select>
+		                    </div>
+		                </div>
+		            </form>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">社交账号：</label>
+		        <div class="col-sm-7">
+		            <input type="text" class="form-control" placeholder="">
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">出生日期：</label>
+		        <div class="col-sm-7">
+		            <input readonly="" class="form-control form_datetime" type="text" style="border: 1px solid #e5e6e7;">
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">死亡日期：</label>
+		        <div class="col-sm-7">
+		            <input readonly="" class="form-control form_datetime" type="text" style="border: 1px solid #e5e6e7;">
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">生平经历：</label>
+		        <div class="col-sm-7">
+		            <textarea class="form-control" placeholder=""></textarea>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">上传图片：</label>
+		        <div class="col-sm-7">
+		            <textarea class="form-control" placeholder=""></textarea>
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">墓志铭：</label>
+		        <div class="col-sm-7">
+		            <input type="text" class="form-control" placeholder="">
+		        </div>
+		    </div>
+		    <div class="form-group">
+		        <label class="col-sm-2 control-label">是否公开：</label>
+		        <div class="col-sm-7">
+		            <label class="radio-inline">
+		                <input type="radio" name="rad28284" value="是" checked="">是</label>
+		            <label class="radio-inline">
+		                <input type="radio" name="rad28284" value="否">否</label>
+		        </div>
+		    </div>
+		</div>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src=../assets/js/bootstrap/bootstrap.min.js"></script>
+	<script src="../assets/js/fileinput.min.js"></script>
+	<script src="../assets/js/bootstrap/bootstrap-datetimepicker.min.js"></script>
+	<script src="../assets/js/distpicker.data.min.js"></script>
+	<script src="../assets/js/distpicker.min.js"></script>
+	<script src="../assets/js/bootstrap/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../assets/js/zh.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+	<script src="../assets/js/beautifyhtml.js"></script>
+	<script src="../assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Remember Me</title>
+        <link rel='stylesheet' href='../assets/css/css-pro-layout.css'>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
+        <link rel="stylesheet" href="../assets/css/sideBar.css">
+				<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+				<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+				<link type="text/css" href="../assets/css/demo.css" rel="stylesheet">
+				<link rel="stylesheet" href="../assets/css/uploadImg.css">
+				<link rel="stylesheet" href="https://at.alicdn.com/t/font_1805932_ysrcp4y0uy9.css">
+				<link href="../assets/css/form/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="layout has-sidebar fixed-sidebar fixed-header" style="background-image:url('../assets/images/bg.png');">
+						<aside id="sidebar" class="sidebar break-point-lg has-bg-image">
+                <div class="image-wrapper">
+                    <img src="../assets/images/bg.png" alt="sidebar background">
+                </div>
+                <div class="sidebar-layout">
+                    <div class="sidebar-header">
+                       <a href="homepage.html"><span style="font-size:20px; letter-spacing: 2px; font-weight: bold;color: white;">RememberMe</span></a>
+                    </div>
+                    <div class="sidebar-content">
+                        <nav class="menu open-current-submenu">
+                            <ul>
+                                <li class="menu-item">
+																	
+																		<a href="create_bg.html"><span class="menu-icon"><i class="ri-landscape-fill"></i></span><span class="menu-title">创建背景</span></a>
+                                		<a href="create_star.html"><span class="menu-icon"><i class="ri-earth-fill"></i></span><span class="menu-title">创建星球</span></a>
+																		<a href="complete_info.html"><span class="menu-icon"><i class="ri-account-circle-fill"></i></span><span class="menu-title">完善信息</span></a>
+                                		
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="sidebar-footer">
+                        <span>每个人都有一颗属于自己的星星</span>
+                    </div>
+                </div>
+            </aside>
+            <div id="overlay" class="overlay"></div>
+            <div class="layout">
+							<nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+								<div class="container">
+									<a class="navbar-brand" id="btn-collapse" href="#"><i class="ri-menu-line ri-xl"></i></a><a id="btn-toggle" href="#" class="sidebar-toggler break-point-lg"><i class="ri-menu-line ri-xl"></i></a>
+									<button class="navbar-toggler" type="button" data-action="offcanvas-open" data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+									  <span class="navbar-toggler-icon"></span>
+									</button>
+									<div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+									  <ul class="navbar-nav ml-auto align-items-lg-center">
+									    <li class="nav-item ">
+									      <a class="nav-link active" href="./individual.html">个人星球</a>
+									    </li>
+									    <li class="nav-item">
+									      <a class="nav-link" href="./topic.html">专题星球</a>
+									    </li>
+											<li class="nav-item">
+											  <a class="nav-link" href="./user.html">用户中心</a>
+											</li>
+											<li class="nav-item">
+											  <a class="nav-link" href="./about.html">关于我们</a>
+											</li>
+									  </ul>
+									</div>
+								</div>
+							</nav>
+							<div class="container">
+								<br><br><br><br>
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-2">
+										<div class="form-group">
+												<div class="input-group input-group-transparent mb-4">
+														<input type="text" class="form-control form-control-sm" placeholder="姓名">
+												</div>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<select class="form-control form-control-sm">
+										  <option>男</option>
+											<option>女</option>
+											<option>其它</option>
+										</select>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+												<div class="input-group input-group-transparent mb-4">
+														<input type="date" class="form-control form-control-sm" placeholder="出生日期">
+												</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-2">
+										<div class="form-group">
+												<div class="input-group input-group-transparent mb-4">
+														<input type="text" class="form-control form-control-sm" placeholder="民族">
+												</div>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<!-- <form class="form-inline">
+										    <div class="distpicker">
+										        <div class="form-group" style="margin:0px; padding-right:10px;">
+										            <label class="sr-only" for="province10">Province</label>
+										            <select class="form-control" id="province10"></select>
+										        </div>
+										        <div class="form-group" style="margin:0px; padding-right:10px;">
+										            <label class="sr-only" for="city10">City</label>
+										            <select class="form-control" id="city10"></select>
+										        </div>
+										        <div class="form-group" style="margin:0px; padding-right:10px;">
+										            <label class="sr-only" for="district10">District</label>
+										            <select class="form-control" id="district10"></select>
+										        </div>
+										    </div>
+										</form> -->
+										<div class="form-group">
+												<div class="input-group input-group-transparent mb-4">
+														<input type="text" class="form-control form-control-sm" placeholder="籍贯">
+												</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+												<div class="input-group input-group-transparent mb-4">
+														<input type="date" class="form-control form-control-sm" placeholder="死亡日期">
+												</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-8">
+										<div class="form-group">
+												<div class="input-group input-group-transparent mb-4">
+														<input type="text" class="form-control form-control-sm" placeholder="墓志铭">
+												</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-8">
+										<div class="form-group">
+											<textarea class="form-control" placeholder="生平经历" rows="3" resize="none"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-2"></div>
+									<div class="col-8">
+										    <div class="upload-content">
+										        <div class="content-img">
+										            <ul class="content-img-list"></ul>
+										            <div class="file">
+										                <i class="gcl gcladd"></i>
+										                <input type="file" name="file" accept="image/*" id="upload" multiple>
+										            </div>
+										        </div>
+										        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+										            <div class="modal-dialog modal-lg" role="document">
+										                <div class="modal-content">
+										                </div>
+										            </div>
+										        </div>
+										    </div>
+											</div>
+									</div>
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-2">
+										<div class="custom-control custom-radio mb-3">
+												<input type="radio" name="custom-radio-1" class="custom-control-input" id="customRadio1">
+												<label class="custom-control-label" for="customRadio1" style="color: #fff;">公开星球</label>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="custom-control custom-radio mb-3">
+												<input type="radio" name="custom-radio-1"  class="custom-control-input" id="customRadio2" checked="">
+												<label class="custom-control-label" for="customRadio2" style="color: #fff;">私密星球</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-2">
+										<a href="deceased.html">
+										 <button type="button" class="btn btn-outline-light btn-sm">确认创建</button>
+									  </a>
+									</div>
+								</div>
+							</div>
+              <div class="overlay"></div>
+            </div>
+        </div>
+        
+
+				<script src='../assets/js/popper.min.js'></script>
+        <script src="../assets/js/sideBar.js"></script>
+				<!-- Core -->
+				<script src="../assets/vendor/jquery/jquery.min.js"></script>
+				<script src="../assets/vendor/popper/popper.min.js"></script>
+				<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+				<!-- FontAwesome 5 -->
+				<script src="../assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+				<!-- Page plugins -->
+				<script src="../assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+				<script src="../assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+				<script src="../assets/vendor/input-mask/input-mask.min.js"></script>
+				<script src="../assets/vendor/nouislider/js/nouislider.min.js"></script>
+				<script src="../assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+				<!-- Theme JS -->
+				<script src="../assets/js/theme.js"></script>
+				<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'></script>
+       
+				<script src="../assets/js/uploadImg.js"></script>
+				<script src="../assets/js/bootstrap/bootstrap-datetimepicker.min.js"></script>
+				<script src="../assets/js/bootstrap/bootstrap-datetimepicker.zh-CN.js"></script>
+				<script src="../assets/js/distpicker.data.min.js"></script>
+				<script src="../assets/js/distpicker.min.js"></script>
+		</body>
+</html>

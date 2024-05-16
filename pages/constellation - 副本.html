@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Remember Me</title>
+		<link rel='stylesheet' href='../assets/css/css-pro-layout.css'>
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
+		<link rel="stylesheet" href="../assets/css/sideBar.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+		<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+		<link type="text/css" href="../assets/css/demo.css" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/js-snackbar.css?v=1.0.0">
+		<link rel="stylesheet" href="../assets/css/search.css">
+		<link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_1805932_ysrcp4y0uy9.css">
+	</head>
+	<style>
+		.ct {
+			position: absolute;
+			top: 80%;
+			left: 50%;
+			width: 1280px;
+			height: 800px;
+			transform: translate(-50%, -50%);
+			transform-style: preserve-3d;
+			perspective-origin: center 30vh;
+			perspective: 1000px;
+		}
+
+		.ct .item {
+			font-size: 0;
+			position: absolute;
+			transform-origin: center;
+			width: 400px;
+			transform: translateZ(-10000px);
+			background-color: transparent;
+			border: transparent;
+			opacity: 0;
+			transition: opacity .5s linear;
+			cursor: pointer;
+		}
+
+		.ct .item img {
+			font-size: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.text1 {
+			position: absolute;
+			z-index: 99;
+			top: 240px;
+			left: -1920px;
+		}
+
+		.text2 {
+			position: absolute;
+			z-index: 99;
+			top: 450px;
+			left: -1920px;
+		}
+
+		.text3 {
+			position: absolute;
+			z-index: 99;
+			top: 660px;
+			left: -1920px;
+		}
+
+		.slide1 {
+			animation: .8s slide forwards;
+		}
+
+		.slide2 {
+			animation: 1s slide 1.2s forwards;
+		}
+
+		.slide3 {
+			animation: 1.2s slide 2.4s forwards;
+		}
+
+		@keyframes slide {
+			from {
+				left: -1920px;
+			}
+
+			to {
+				left: 86.5px
+			}
+		}
+
+		.pic-wrapper {
+			opacity: 0;
+			z-index: -1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 1650px;
+			height: 928px;
+			background-color: transparent;
+			transition: opacity .1s linear;
+		}
+
+		.pic-wrapper .close {
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			background: url(../assets/images/bg.png) no-repeat center;
+			right: -25px;
+			top: -25px;
+			z-index: 10;
+			cursor: pointer;
+		}
+
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+		}
+
+		.swiper-button-prev {
+			left: -100px;
+		}
+
+		.swiper-button-next {
+			right: -100px;
+		}
+
+		.swiper-slide,
+		.swiper-slide img {
+			margin: 0 auto;
+			height: 100%;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+		}
+	</style>
+	<body>
+		<div class="layout has-sidebar fixed-sidebar fixed-header"
+			style="background-image: url(../assets/images/bg.png);">
+			<aside id="sidebar" class="sidebar break-point-lg has-bg-image">
+				<div class="image-wrapper">
+					<img src="../assets/images/bg.png" alt="sidebar background">
+				</div>
+				<div class="sidebar-layout">
+					<div class="sidebar-header">
+						<a href="homepage.html">
+							<!-- <span style="font-size:20px; letter-spacing: 2px; font-weight: bold;color: white;">RememberMe</span> -->
+							<span><img src="../assets/images/logo_3.png" width="50px""></span>
+										 </a>
+									</div>
+									<div class=" sidebar-content">
+								<nav class="menu open-current-submenu">
+									<ul>
+										<li class="menu-item">
+											<a href="create_bg.html"><span class="menu-icon""><i class="
+													ri-focus-line"></i></span><span
+													class="menu-title">Capricorn</span></a>
+											<a href="create_star.html"><span class="menu-icon"><i
+														class="ri-focus-2-line"></i></span><span
+													class="menu-title">Aquarius</span></a>
+											<a href="complete_info.html"><span class="menu-icon"><i
+														class="ri-focus-fill"></i></span><span
+													class="menu-title">Pisces</span></a>
+											<a href="create_bg.html"><span class="menu-icon"><i
+														class="ri-focus-2-fill"></i></span><span
+													class="menu-title">Aries</span></a>
+											<a href="create_star.html"><span class="menu-icon"><i
+														class="ri-gradienter-line"></i></span><span
+													class="menu-title">Taurus</span></a>
+											<a href="complete_info.html"><span class="menu-icon"><i
+														class="ri-gradienter-fill"></i></span><span
+													class="menu-title">Gemini</span></a>
+											<a href="create_bg.html"><span class="menu-icon"><i
+														class="ri-restart-fill"></i></span><span
+													class="menu-title">Cancer</span></a>
+											<a href="create_star.html"><span class="menu-icon"><i
+														class="ri-scan-2-line"></i></span><span
+													class="menu-title">Leo</span></a>
+											<a href="complete_info.html"><span class="menu-icon"><i
+														class="ri-app-store-fill"></i></span><span
+													class="menu-title">Virgo</span></a>
+											<a href="create_bg.html"><span class="menu-icon"><i
+														class="ri-copper-diamond-fill"></i></span><span
+													class="menu-title">Libra</span></a>
+											<a href="create_star.html"><span class="menu-icon"><i
+														class="ri-coreos-fill"></i></span><span
+													class="menu-title">Scorpio</span></a>
+											<a href="complete_info.html"><span class="menu-icon"><i
+														class="ri-copper-coin-line"></i></span><span
+													class="menu-title">Sagiffarius</span></a>
+										</li>
+									</ul>
+								</nav>
+					</div>
+					<div class="sidebar-footer">
+						<div class="sidebar-content">
+							<nav class="menu open-current-submenu">
+								<li class="menu-item">
+									<a href="create_bg.html"><span class="menu-title">创建星星</span></a>
+								</li>
+							</nav>
+						</div>
+					</div>
+			</aside>
+			<div class="layout">
+				<nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+					<div class="container">
+						<a class="navbar-brand" id="btn-collapse" href="#"><i class="ri-menu-line ri-xl"></i></a><a
+							id="btn-toggle" href="#" class="sidebar-toggler break-point-lg"><i
+								class="ri-menu-line ri-xl"></i></a>
+						<button class="navbar-toggler" type="button" data-action="offcanvas-open"
+							data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+							<ul class="navbar-nav ml-auto align-items-lg-center">
+								<li class="nav-item">
+									<div class="search-box">
+										<input type="text" placeholder=" " />
+										<span></span>
+									</div>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link" href="#"> </a>
+								</li>
+								<li class="nav-item ">
+									<a class="nav-link active" href="./individual.html">个人星球</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./topic.html">专题星球</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./about.html">关于我们</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./user.html"><span><img src="../assets/images/lp-4.jpg"
+												width="30px" class="rounded-circle"></span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="container">
+					<div class="text">
+						<img class="text text1 slide1" src="../assets/images/s10.png" alt="">
+						<img class="text text2 slide2" src="../assets/images/s11.png" alt="">
+						<img class="text text3 slide3" src="../assets/images/s12.png" alt="">
+					</div>
+					<div class="ct"></div>
+					<div class="pic-wrapper">
+						<div class="close"></div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">Slide 1</div>
+								<div class="swiper-slide">Slide 2</div>
+								<div class="swiper-slide">Slide 3</div>
+							</div>
+						</div>
+						<div class="swiper-button-prev swiper-button-white"></div>
+						<div class="swiper-button-next swiper-button-white"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../assets/js/search.js"></script>
+		<script src='../assets/js/popper.min.js'></script>
+		<script src="../assets/js/sideBar.js"></script>
+		<!-- Core -->
+		<script src="../assets/vendor/jquery/jquery.min.js"></script>
+		<script src="../assets/vendor/popper/popper.min.js"></script>
+		<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+		<!-- FontAwesome 5 -->
+		<script src="../assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+		<!-- Page plugins -->
+		<script src="../assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+		<script src="../assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+		<script src="../assets/vendor/input-mask/input-mask.min.js"></script>
+		<script src="../assets/vendor/nouislider/js/nouislider.min.js"></script>
+		<script src="../assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+		<script src="../assets/js/swiper-bundle.min.js"></script>
+		<!-- Theme JS -->
+		<script src="../assets/js/theme.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'></script>
+	</body>
+</html>
+<!--用户头像-->
+<script>
+	document.querySelector("html").onloadstart = function() {
+		var xhr = new XMLHttpRequest();
+		xhr.open('post', '../api/homepage/profile_photo.php');
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				$('profilePhoto').attr('scr', xhr.responseText);
+			}
+		}
+		xhr.send(null);
+	}
+</script>
+<!-- 逝者星球图片 -->
+<script>
+	function getParams(key) {
+		var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) {
+			return unescape(r[2]);
+		}
+		return null;
+	}
+	var con_name = getParams("con_name");
+	var xhr = new XMLHttpRequest();
+	xhr.open('post', '../assets/api/constellation/constellationtoplanets.php');
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && xhr.status == 200) {
+			var arr = JSON.parse(xhr.responseText);
+			let swiperNode = '';
+			for (var i = 0; i < arr.length; i++) {
+				var currentObj=arr[i];
+				var sid=currentObj.sid;
+				var sname=currentObj.sname;
+				swiperNode += '<div class="swiper-slide"><a href="deceased.html?sid='+sid'" data-toggle="tooltip" title="'+sname+'" ><img src="' + currentObj.simage +
+					'" alt="" ;></div>'
+			}
+			$('.swiper-wrapper').html(swiperNode)
+
+			let swiper = new Swiper('.swiper-container', {
+				direction: 'horizontal', // 垂直切换选项
+				loop: true, // 循环模式选项
+				speed: 1,
+			})
+
+
+			setTimeout(function() {
+				$('.text').animate({
+					opacity: 0
+				})
+				$('.ct').show()
+				move()
+			}, 0.1)
+			let htm = '';
+			let timer
+
+
+			for (var i = 0; i < arr.length; i++) {
+				var currentObj = arr[i];
+				htm += '<div class="item" id="' + currentObj.sid +'"><img src="' + currentObj.simage + '" alt=""></div>'
+			}
+			$('.ct').html(htm)
+			let list = $('.item')
+
+			$('.ct').on('click', '.item', function() {
+				console.log(Number($(this).index()) + 1)
+				swiper.slideTo(Number($(this).index()) + 1)
+				// $('.pic-wrapper').show()
+				$('.pic-wrapper').css({
+					'opacity': 1,
+					'z-index': 99
+				})
+				$('.ct').hide()
+			})
+
+			$('.swiper-button-prev').on('click', function() {
+				swiper.slidePrev()
+			})
+
+			$('.swiper-button-next').on('click', function() {
+				swiper.slideNext()
+			})
+
+			$('.close').on('click', function() {
+				$('.ct').show()
+				// $('.pic-wrapper').hide()
+				$('.pic-wrapper').css({
+					'opacity': 0,
+					'z-index': -1
+				})
+			})
+
+			function move() {
+				for (let i = 0, len = list.length; i < len; i++) {
+					if (i % 4 == 0) {
+						$('.item').eq(i).css('top', -Number(Math.floor(Math.random() * 1000) + 200) + 'px');
+						$('.item').eq(i).css('left', -Number(Math.floor(Math.random() * 2000) - 100) + 'px');
+					} else if (i % 4 == 1) {
+						$('.item').eq(i).css('top', -Number(Math.floor(Math.random() * 1000) + 200) + 'px');
+						$('.item').eq(i).css('left', Number(Math.floor(Math.random() * 2000) - 100) + 'px');
+					} else if (i % 4 == 2) {
+						$('.item').eq(i).css('top', Number(Math.floor(Math.random() * 1000) + 200) + 'px');
+						$('.item').eq(i).css('left', -Number(Math.floor(Math.random() * 2000) - 100) + 'px');
+					} else {
+						$('.item').eq(i).css('top', Number(Math.floor(Math.random() * 1000) + 200) + 'px');
+						$('.item').eq(i).css('left', Number(Math.floor(Math.random() * 2000) - 100) + 'px');
+					}
+					$('.item').eq(i).attr('data-z', -10000)
+					let delay = Math.floor(Math.random() * 10000)
+					setTimeout(function() {
+						let Z = ~~$('.item').eq(i).attr('data-z');
+						timer = setInterval(function() {
+							if (Z >= -9909) {
+								$('.item').eq(i).css('opacity', 1)
+							}
+							if (Z >= -4000) {
+								$('.item').eq(i).css('opacity', 0)
+							}
+							if (Z >= 1000) {
+								Z = -10000
+							}
+							$('.item').eq(i).css('transform', 'translateZ(' + Z + 'px)')
+							Z += 10
+						}, 5);
+					}, delay)
+				}
+			}
+		}
+	}
+	xhr.send("con_name");
+</script>
+<!-- 点击星球得到sid -->
+<script>
+	document.querySelector('img').onclick = function() {
+		var xhr = new XMLHttpRequest();
+		xhr.open('post', '') //将点击的逝者星球对应的id存入cookie
+		if (xhr.readyState == 4 && xhr.status == 200) {
+
+		}
+		xhr.send(this.id);
+	}
+</script>

@@ -1,0 +1,1 @@
+"use strict";var searchBox=document.querySelectorAll('.search-box input[type="text"] + span');searchBox.forEach(function(a){a.addEventListener("click",function(){a.previousElementSibling.value=""})});

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Remember Me</title>
+		<link rel='stylesheet' href='../assets/css/css-pro-layout.css'>
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
+		<link rel="stylesheet" href="../assets/css/sideBar.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+		<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+		<link type="text/css" href="../assets/css/demo.css" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/uploadImg.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/register.css">
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_1805932_ysrcp4y0uy9.css">
+		<link href="../assets/css/form/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	</head>
+	<style>
+		html {
+			height: 100%;
+			background-image: -webkit-radial-gradient(ellipse farthest-corner at center top, #000d4d 0%, #000105 100%);
+			background-image: radial-gradient(ellipse farthest-corner at center top, #000d4d 0%, #000105 100%);
+			cursor: move;
+		}
+
+		body {
+			width: 100%;
+			margin: 0;
+			overflow: hidden;
+		}
+	</style>
+	<body>
+		<div class="layout has-sidebar fixed-sidebar fixed-header"
+			style="background-image:url('../assets/images/bg.png');">
+			<aside id="sidebar" class="sidebar break-point-lg has-bg-image">
+				<div class="image-wrapper">
+					<img src="../assets/images/bg.png" alt="sidebar background">
+				</div>
+				<div class="sidebar-layout">
+					<div class="sidebar-header">
+						<a href="homepage.html">
+							<span><img src="../assets/images/logo_3.png" width="50px"></span>
+						</a>
+					</div>
+					<div class="sidebar-content">
+						<nav class="menu open-current-submenu">
+							<ul>
+								<li class="menu-item sub-menu">
+									<a href="#"><span class="menu-icon"><i class="ri-water-flash-line"></i></span><span
+											class="menu-title">自然灾害</span></a>
+									<div class="sub-menu-list">
+										<ul>
+											<li class="menu-item  sub-menu">
+												<a href="#"><span class="menu-title">洪水</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">1998年特大洪水</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">2016年长江洪灾</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">2020年南方洪涝</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">地震</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">唐山大地震</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">汶川大地震</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">玉树大地震</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-item sub-menu">
+									<a href="#"><span class="menu-icon"><i class="ri-traffic-light-line"></i></span><span
+											class="menu-title">事故灾难</span></a>
+									<div class="sub-menu-list">
+										<ul>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">公共设施和设备事故</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item sub-menu">
+															<a href="#"><span class="menu-title">山西襄汾聚仙酒家坍塌</span></a>
+														</li>
+														<li class="menu-item sub-menu">
+															<a href="#"><span class="menu-title">长沙居民自建房倒塌</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">生态破坏事故</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item sub-menu">
+															<a href="#"><span class="menu-title">祁连山系列环境污染案</span></a>
+														</li>
+														<li class="menu-item sub-menu">
+															<a href="#"><span class="menu-title">西藏昌都水泥项目批小建大</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">交通运输事故</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item sub-menu">
+															<a href="#"><span class="menu-title">东航坠机事件</span></a>
+														</li>
+														<li class="menu-item sub-menu">
+															<a href="#"><span class="menu-title">四川甘洛县高铁事故</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-item sub-menu">
+									<a href="#"><span class="menu-icon"><i class="ri-service-fill"></i></span><span
+											class="menu-title">社会安全</span></a>
+									<div class="sub-menu-list">
+										<ul>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">恐怖袭击</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">9.21新疆轮台暴恐袭击案</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">10.28暴力恐怖袭击案</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">打架斗殴</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">唐山打人事件</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">1.23高阳打架斗殴案</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-item sub-menu">
+									<a href="#"><span class="menu-icon"><i class="ri-shield-cross-fill"></i></span><span
+											class="menu-title">医疗卫生</span></a>
+									<div class="sub-menu-list">
+										<ul>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">癌症</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">肺癌</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">宫颈癌</span></a>
+														</li>
+													</ul>
+												</div>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">传染病</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">非典</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">新冠肺炎</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="sidebar-footer">
+						<div class="sidebar-content">
+							<nav class="menu open-current-submenu">
+								<li class="menu-item" data-toggle="modal" data-target="#exampleModal">
+									<a><span class="menu-title">创建事件</span></a>
+								</li>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<div id="overlay" class="overlay"></div>
+			<div class="layout">
+				<nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+					<div class="container">
+						<a class="navbar-brand" id="btn-collapse" href="#"><i class="ri-menu-line ri-xl"></i></a><a
+							id="btn-toggle" href="#" class="sidebar-toggler break-point-lg"><i
+								class="ri-menu-line ri-xl"></i></a>
+						<button class="navbar-toggler" type="button" data-action="offcanvas-open"
+							data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+							<ul class="navbar-nav ml-auto align-items-lg-center">
+								<li class="nav-item ">
+									<a class="nav-link" href="./individual.html">个人星球</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="./topic.html">专题星球</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./about.html">关于我们</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./user.html"><span><img src="../assets/images/lp-4.jpg"
+												width="30px" class="rounded-circle"></span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<main class="main">
+					<br><br><br><br>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-5"></div>
+							<div class="col-lg-2">
+								<div class="mb-lg mb-lg-0 text-center text-lg-right">
+									<h3 class="heading h3 text-white strong-400 text-center">Hot Topic</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5"></div>
+
+						<br><br><br><br>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-lg-3" id="to1">
+								<div class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/T.jpeg"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke" id="1034">热射病</h6>
+										<p class="card-text" style="font-size: 8px;color: aliceblue;">
+											最近，我国南方高温不断，不少地方气温突破40摄氏度···</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4" id="to2">
+								<div class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');margin-top: -30px;">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/storm.jpeg"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke;"id="7654">郑州特大暴雨</h6>
+										<p class="card-text " style="font-size: 8px;color: aliceblue;">
+											2021年7月18日18时至21日0时，郑州出现罕见持续降水天气···</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3" id="to3">
+								<div class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/crash.jpeg"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke" id="5139">东航坠机</h6>
+										<p class="card-text" style="font-size: 8px;color: aliceblue;">
+											2022年3月21日，MU5735客机在广西壮族自治区梧州市附近山林···</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br><br><br><br>
+						<div class="row">
+							<div class="col-lg-1"></div>
+							<div class="col-lg-3" id="to4">
+								<div class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/earthquake.jpeg"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke;" id="3048">汶川地震</h6>
+										<p class="card-text" style="font-size: 8px;color: aliceblue;">
+											2008年5月12日14时28分4秒，四川省阿坝藏族羌族自治县发生8.0级···</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4" id="to5">
+								<div class=class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');margin-top: -30px;">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/COV.jpeg"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke;" id="7964">COV-19</h6>
+										<p class="card-text" style="font-size: 8px;color: aliceblue;">
+											新冠肺炎疫情是爆发于2019年12月，如今已具有大流行特征···</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3" id="to6">
+								<div class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/parade.jpeg"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke;" id="7132">香港修例风波</h6>
+										<p class="card-text" style="font-size: 8px;color: aliceblue;">
+											自2019年6月，想干反对派和一些激进势力借和平游行集会之名···</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br><br><br><br>
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-lg-3" id="to7">
+								<div class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/violence.jpeg"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke" id="7747">伤医事件</h6>
+										<p class="card-text" style="font-size: 8px;color: aliceblue;">
+											2021年1月26日，吉水县人民医院内科医生胡淑云在病房查房过程中突然遭到歹徒···</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4" id="to8">
+								<div class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');margin-top: -30px;">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/jump.png"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke;" id="4399">学生自杀</h6>
+										<p class="card-text " style="font-size: 8px;color: aliceblue;">
+											2019年4月17日，在上海卢浦大桥上，一名17岁高中男孩在桥边纵身跳下···</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3" id="to9">
+								<div class="card mb-lg mb-lg-0"
+									style="background-image: url('../assets/images/card.png');">
+									<div class="px-3">
+										<a href="#">
+											<img class="card-img z-depth-2" src="../assets/images/kill.jpeg"
+												style="margin-top: -30px;" alt="Homapage">
+										</a>
+									</div>
+									<div class="card-body">
+										<h6 class="card-title mb-2" style="color: whitesmoke" id="8848">江歌事件</h6>
+										<p class="card-text" style="font-size: 8px;color: aliceblue;">
+											日本当地时间2016年11月3日，就读于日本东京政法大学的中国留学生···</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+			<div class="overlay"></div>
+		</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">创建事件
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control form-control-sm" id="tname" placeholder="事件名称">
+							</div>
+							<div class="form-group">
+								<input type="date" class="form-control form-control-sm" id="ttime">
+							</div>
+							<div class="form-group">
+								<select class="form-control form-control-sm" id="tcname1">
+									<option>自然灾害</option>
+									<option>事故灾难</option>
+									<option>医疗卫生</option>
+									<option>社会安全</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<select class="form-control form-control-sm" id="tcname2">
+									<option>地震</option>
+									<option>洪水</option>
+									<option>台风</option>
+									<option>海啸</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control form-control-sm" id="tcontent" rows="3"
+									placeholder="事件描述"></textarea>
+							</div>
+							<div class="form-group">
+								<div class="upload-content">
+									<div class="content-img">
+										<ul class="content-img-list"></ul>
+										<div class="file">
+											<i class="gcl gcladd"></i>
+											<input type="file" name="file" accept="image/*" id="upload" multiple>
+										</div>
+									</div>
+									<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+										aria-labelledby="myLargeModalLabel">
+										<div class="modal-dialog modal-lg" role="document">
+											<div class="modal-content">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" id="sure">确认创建</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src='../assets/js/popper.min.js'></script>
+		<script src="../assets/js/sideBar.js"></script>
+		<!-- Core -->
+		<script src="../assets/vendor/jquery/jquery.min.js"></script>
+		<script src="../assets/vendor/popper/popper.min.js"></script>
+		<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+		<!-- FontAwesome 5 -->
+		<script src="../assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+		<!-- Page plugins -->
+		<script src="../assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+		<script src="../assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+		<script src="../assets/vendor/input-mask/input-mask.min.js"></script>
+		<script src="../assets/vendor/nouislider/js/nouislider.min.js"></script>
+		<script src="../assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+		<!-- Theme JS -->
+		<script src="../assets/js/theme.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'></script>
+	</body>
+</html>
+<!-- 创建事件 -->
+<script>
+	document.getElementById("sure").onclick = function() {
+		var xhr = new XMLHttpRequest();
+		xhr.open('post', '../api/topic/create_event.php');
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		var tname = document.getElementById("tname");
+		var ttime = document.getElementById("ttime");
+		var tcontent = document.getElementById("tcontent");
+		// var tcname1=$("#tcname1 option:selected").text();
+		// var tcname2=$("#tcname2 option:selected").text();
+		var category = $("#tcname2 option:selected").text();
+		var arr = '{"tname":tname,"ttime":ttime,"tcontent":tcontent,"category":category}'
+		var obj = JSON.parse(arr);
+		xhr.send(obj);
+	}
+</script>
+<!-- 创建事件中下拉框展开，查询二级目录 -->
+<script>
+	document.getElementById("tcname1").onselect=function(){
+		var tcname1=$("#tcname1 option:selected").text();
+		var xhr=new XMLHttpRequest();
+		xhr.open('post','../api/topic/level_two.php');
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		if(xhr.readyState==4&&xhr.status==200){
+			var arr=JSON.parse(xhr.responseText);
+			//返回tcname2数组
+			var tcname2=document.getElementById("tcname2")
+			var all_op=tcname2.getElementsByTagName("option");
+			for(var i=0;i<tall_op.length;i++){
+				var op=all_op[i];
+				tcname2.removeChild(op);
+				i--;
+			}
+			for(var i=0;i<arr;i++){
+				var new_op=tcname2.createElement("option");
+				var new_text=new_op.createTextNode(arr[i]);
+				new_op.appendChild(new_text);
+				tcname2.appendChild(new_op);
+			}
+		}
+		xhr.send(tcname1);
+	}	
+</script>
+<!-- 9个热点事件读取  没有相应的php-->
+<script>
+	document.querySelector("html").onloadstart=function(){
+		var xhr=new XMLHttpRequest();
+		xhr.open('post','../api/homepage/hot_topic.php');
+		xhr.onreadystatechange=function(){
+		    if(xhr.readyState==4&&xhr.status==200){
+				var arr=JSON.parse(xhr.responseText);
+				for(var i=0;i<9;i++){
+					document.getElementsByClassName("card-img")[i].getAttributeNode("scr").value=arr[i].tpath;
+					document.getElementsByClassName("card-title")[i].innerHTML=arr[i].tname;
+					document.getElementsByClassName("card-text")[i].innerHTML=arr[i].tcontent;
+				}
+			}
+		xhr.send(null;)
+	    }
+	}
+</script>
+<!-- 目录展开，查询三级目录,未完成,不会 -->
+<script>
+	document.getElementsByClassName("menu-item").onclick=function(){
+		var tname=$(this).text();
+		var xhr=new XMLHttpRequest();
+		xhr.open('post','../api/topic/level_three.php');
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		if(xhr.readyState==4&&xhr.status==200){
+			var arr=JSON.parse(xhr.responseText);
+			var tcname2=//获取父元素
+			var all_sub_menu=tcname2.getElementsByClassName("menu-item");
+			for(var i=0;i<all_sub_menu.length;i++){
+			 			var sub_menu=all_op[i];
+			 			tcname2.removeChild(op);
+			 			i--;
+			}
+			for(var i=0;i<arr;i++){
+			 			var new_sub_menu=tcname2.createElement("");
+			 			var new_text=new_op.createTextNode(arr[i]);
+			 			new_op.appendChild(new_text);
+			 			tcname2.appendChild(new_op);
+			 }
+					
+		}
+		xhr.send("tname="tname);
+	}	
+</script>
+<!-- 点击事件，跳转页面-->
+<script>
+	$(function(){
+		$('.col-lg-4').click(function(){
+			var event_name=$(this).find('h6').html();
+			console.log("event_name");
+			$(this).find('a').attr('href',"event.html?event="+event_name);
+		})
+		$('.col-lg-3').click(function(){
+			var event_name=$(this).find('h6').html();
+			console.log(event_name);
+			$(this).find('a').attr('href',"event.html?event="+event_name);
+		})
+	})
+</script>

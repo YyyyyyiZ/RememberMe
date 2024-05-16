@@ -1,0 +1,90 @@
+<style>
+			
+			*{
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+				
+			}
+
+			.rg_layout{
+				width: 780px;
+				height: 600px;
+				padding:20px 0 0 0;
+				border: 8px solid #EEEEEE;
+				border-radius: 15px;
+				background-color: white ;
+				margin:100px auto;  /*让div标签水平居中 */
+				opacity: 0.75; /* 设置透明度*/
+				
+			}
+			
+			.rg_left{
+				float: left;
+				width: 300px;
+			}
+
+			.rg_right{
+
+					float: right;
+					width: 400px;
+			}
+			.rg_left_event{
+				opacity: 0.6;
+				float: left;
+				width: 350px;
+			}
+			
+			.rg_right_event{
+			    background-color: aliceblue;
+					float: right;
+					width: 350px;
+			}
+			.p_reg{
+				
+				color: #ffd026;
+				font-size: 20px;
+				
+			}
+			.p_en{
+				color: gray;
+				font-size: 20px;
+				
+			}
+			.rg_right > p:first-child{
+				
+				margin: 10px;
+			}
+			.rg_right p a{
+				color: pink;
+			}
+			.td_left{
+				width: 70px;
+				text-align: right;
+				height: 45px;
+			}
+			.td_right{
+				padding-left:20px;
+				width: 60px;
+				
+			}
+			#cname,#native_place,#nation,#birth,#death,#epitaph,#phone,#constellation{
+				width: 200px;
+				height: 35px;
+				border: 1px solid gray;
+				border-radius: 10px;   /* 设置边框圆角*/
+				padding-left: 10px;
+			}
+
+			#btn_sub{
+				width: 120px;
+				height: 40px;
+				color: aliceblue;
+				background-image: url(../images/bg.png);			
+				border:none
+				border-radius: 6px;
+				/* font-weight: bold; */
+				margin-bottom: 20px;
+				
+			}
+		</style>

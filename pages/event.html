@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Remember Me</title>
+		<link rel='stylesheet' href='../assets/css/css-pro-layout.css'>
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
+		<link rel="stylesheet" href="../assets/css/sideBar.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+		<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+		<link type="text/css" href="../assets/css/demo.css" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/smoke.css">
+		<style>
+			body {
+				font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+				background-color: black;
+				background-position: center 0;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				-webkit-background-size: cover;
+				-o-background-size: cover;
+				-moz-background-size: cover;
+				-ms-background-size: cover;
+			}
+
+			.field {
+				display: inline-block;
+				margin-bottom: 3px;
+			}
+
+			#list {
+				width: 460px;
+				height: 70%;
+				min-height: 400px;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				background: none;
+				color: #ffffff;
+				text-align: left;
+				position: absolute;
+				bottom: 90px;
+			}
+
+			#list::-webkit-scrollbar {
+				display: none;
+				visibility: hidden;
+			}
+
+			#list p {
+				line-height: 25px;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			.comment-box {
+				margin-top: 10px;
+				margin-right: 50px;
+				padding: 0px;
+			}
+
+			.comment-content {
+				line-height: 15px;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			#info {
+				width: 300px;
+				position: absolute;
+				color: #fff;
+				top: 50%;
+				left: 35%;
+				transform: translate(-50%, -50%);
+				font-size: 20px;
+				background: transparent;
+				padding: 10px 10px;
+				border-radius: 30px;
+				text-align: center;
+				line-height: 30px;
+				border: 2px #fff solid;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout has-sidebar fixed-sidebar fixed-header">
+			<aside id="sidebar" class="sidebar break-point-lg has-bg-image">
+				<div class="image-wrapper">
+					<img src="../assets/images/crash.jpeg" id="cover" alt="sidebar background">
+				</div>
+				<div class="sidebar-layout">
+					<div class="sidebar-header">
+						<a href="homepage.html">
+							<span><img src="../assets/images/logo_3.png" width="50px"></span>
+						</a>
+					</div>
+					<div class="sidebar-content">
+						<nav class="menu open-current-submenu">
+							<ul>
+								<li class="menu-item sub-menu">
+									<a href="#"><span class="menu-icon"><i class="ri-water-flash-line"></i></span><span
+											class="menu-title">自然灾害</span></a>
+									<div class="sub-menu-list">
+										<ul>
+											<li class="menu-item">
+												<a href="#"><span class="menu-title">洪水</span></a>
+											</li>
+											<li class="menu-item">
+												<a href="#"><span class="menu-title">火灾</span></a>
+											</li>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">地震</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">唐山大地震</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">汶川大地震</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">玉树大地震</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-item sub-menu">
+									<a href="#"><span class="menu-icon"><i
+												class="ri-traffic-light-line"></i></span><span
+											class="menu-title">事故灾难</span></a>
+									<div class="sub-menu-list">
+										<ul>
+											<li class="menu-item">
+												<a href="#"><span class="menu-title">公共设施和设备事故</span></a>
+											</li>
+											<li class="menu-item">
+												<a href="#"><span class="menu-title">生态破坏事故</span></a>
+											</li>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">交通运输事故</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">东航坠机事件</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">四川甘洛县高铁事故</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-item sub-menu">
+									<a href="#"><span class="menu-icon"><i class="ri-service-fill"></i></span><span
+											class="menu-title">社会安全</span></a>
+									<div class="sub-menu-list">
+										<ul>
+											<li class="menu-item">
+												<a href="#"><span class="menu-title">恐怖袭击</span></a>
+											</li>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">打架斗殴</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">唐山打人事件</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-item sub-menu">
+									<a href="#"><span class="menu-icon"><i class="ri-shield-cross-fill"></i></span><span
+											class="menu-title">医疗卫生</span></a>
+									<div class="sub-menu-list">
+										<ul>
+											<li class="menu-item">
+												<a href="#"><span class="menu-title">癌症</span></a>
+											</li>
+											<li class="menu-item sub-menu">
+												<a href="#"><span class="menu-title">传染病</span></a>
+												<div class="sub-menu-list">
+													<ul>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">非典</span></a>
+														</li>
+														<li class="menu-item">
+															<a href="#"><span class="menu-title">新冠肺炎</span></a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu-item">
+									<a href="#"><span class="menu-icon"><i class="ri-command-line"></i></span><span
+											class="menu-title">赠送玫瑰 <span class="badge badge-light">4</span></span></a>
+								</li>
+								<li class="menu-item">
+									<a href="#"><span class="menu-icon"><i class="ri-star-line"></i></span><span
+											class="menu-title">收藏 <span class="badge badge-light"> 9</span></span></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="sidebar-footer">
+						<div class="sidebar-content">
+							<nav class="menu open-current-submenu">
+								<li class="menu-item">
+									<a href="create_event.html"><span class="menu-title">人事两空</span></a>
+								</li>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<div id="overlay" class="overlay"></div>
+			<div class="layout">
+				<nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+					<div class="container">
+						<a class="navbar-brand" id="btn-collapse" href="#"><i class="ri-menu-line ri-xl"></i></a><a
+							id="btn-toggle" href="#" class="sidebar-toggler break-point-lg"><i
+								class="ri-menu-line ri-xl"></i></a>
+						<button class="navbar-toggler" type="button" data-action="offcanvas-open"
+							data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+							<ul class="navbar-nav ml-auto align-items-lg-center">
+								<li class="nav-item ">
+									<a class="nav-link" href="./individual.html">个人星球</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="./topic.html">专题星球</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./about.html">关于我们</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./user.html"><span><img src="../assets/images/lp-4.jpg"
+												width="30px" class="rounded-circle"></span></a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<div id="info">
+								<p class="stext" id="info_text">
+									2022年3月21日14时38分许，一架东航播音737-800客机在广西壮族自治区梧州市藤县埌南镇莫埌村神塘表附近山林坠毁，并引发山火，航班上123名乘客和9名机组人员全部遇难.3月31日，发布“3·21”东航MU5735航空器飞行事故指挥部主要搜救任务已基本完成.4月6日，民航局召开全国民航航空安全电视电话会议，深刻反思“3·21”东航MU5735航空器飞行事故。
+								</p>
+							</div>
+							<canvas id="canv"></canvas>
+						</div>
+						<div class="col-md-4">
+							<div id="list">
+							</div>
+							<div class="container" style="position: absolute;bottom:40px;right: 20px;">
+								<div class="row">
+									<div class="input-group input-group-sm">
+										<input id="demo_text" type="text" class="form-control"
+											placeholder="Leave your message"
+											style="background-color: transparent;color: aliceblue;"
+											aria-describedby="button-addon4">
+										<div class="input-group-append" id="button-addon4">
+											<button class="btn btn-light" onclick="send_pl();" type="button">公开</button>
+											<button class="btn btn-light" onclick="send_pl();" type="button">私密</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			let text = document.querySelector('.stext');
+			text.innerHTML = text.textContent.replace(/\S/g, "<span>$&<\/span>");
+			let span = document.querySelectorAll('span');
+			for (let i = 0; i < span.length; i++) {
+				span[i].addEventListener("mouseover", () => {
+					span[i].classList.add('action');
+				})
+			}
+		</script>
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/layer/layer.js"></script>
+		<script type="text/javascript">
+			function tsinfo(info) {
+				layer.alert(info, {
+					title: false,
+					skin: 'layui-layer-molv',
+					closeBtn: 0
+				});
+			}
+		</script>
+		<script src="../assets/js/info.js"></script>
+		<script src='../assets/js/popper.min.js'></script>
+		<script src="../assets/js/sideBar.js"></script>
+		<!-- Core -->
+		<script src="../assets/vendor/jquery/jquery.min.js"></script>
+		<script src="../assets/vendor/popper/popper.min.js"></script>
+		<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+		<!-- FontAwesome 5 -->
+		<script src="../assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+		<!-- Page plugins -->
+		<script src="../assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+		<script src="../assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+		<script src="../assets/vendor/input-mask/input-mask.min.js"></script>
+		<script src="../assets/vendor/nouislider/js/nouislider.min.js"></script>
+		<script src="../assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+		<!-- Theme JS -->
+		<script src="../assets/js/theme.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'></script>
+		<script src="../assets/js/bootstrapmb.com.js"></script>
+	</body>
+</html>
+<!-- 读取事件 介绍 收藏和送玫瑰尚未完成-->
+<script>
+	//获得event名称
+	function getParams(key) {
+		var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) {
+			return unescape(r[2]);
+		}
+		return null;
+	};
+	var event_name = getParams("event_name");
+
+	document.querySelector("html").onloadstart=function(){
+		var xhr=new XMLHttpRequest();
+		xhr.open('post','../api/event/event_read.php');
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhr.onreadystatechange=function(){
+		    if(xhr.readyState==4&&xhr.status==200){
+				var obj=JSON.parse(xhr.responseText);
+				document.getElementById("info_text").innerHTML=obj.tcontent;
+				document.getElementById("cover").getAttributeNode("scr").value=obj.cover;
+	        }
+		xhr.send("event_name="event_name);
+		}
+	}
+</script>

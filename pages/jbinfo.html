@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function tjinfo()
+			{
+		   //此处在真实项目中则是提交信息。
+			var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+			parent.layer.close(index);
+			parent.layer.alert("举报成功！", {
+				title: false,
+			    skin: 'layui-layer-molv'
+			 , closeBtn: 0
+			});
+			//tsinfo("举报成功！");
+			}
+		</script>
+	</head>
+	<body>
+		<div style="width:100%;text-align: center;line-height:40px;" >
+		<input type="checkbox" name="c_1" value="内容涉黄" />内容涉黄&nbsp;&nbsp;
+		<input type="checkbox" name="c_1" value="内容涉赌" />内容涉赌&nbsp;&nbsp;
+		<input type="checkbox" name="c_1" value="内容涉黑" />内容涉黑&nbsp;&nbsp;
+		<br/>
+		<span style="text-align:left;"><strong>其它内容:</strong></span><br/>
+		<textarea rows="5" cols="60"></textarea>
+		<br/>
+		<input type="button" id="btn1" value="提交举报信息" onclick="tjinfo();"/>
+		</div>
+	</body>
+</html>

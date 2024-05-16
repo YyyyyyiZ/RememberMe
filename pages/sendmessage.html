@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Remember Me</title>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+		<!-- Theme CSS -->
+		<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+		<!-- Demo CSS -->
+		<link type="text/css" href="../assets/css/demo.css" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/extend.css" >
+		<link rel="stylesheet" href="css/bootstrap.min.css" >
+		<style type="text/css">
+        <style type="text/css">
+            .con {
+                height: 6.25rem;
+                background-color: skyblue;
+                border-bottom: 2px solid #e0e0e0;
+                text-align: center;
+            }
+
+            .con-header {
+                font-size: 40px;
+            }
+
+            .inp {
+                height: 6.25rem;
+                background-color: skyblue;
+                display: flex;
+                align-items: center;
+            }
+
+            .form-control:focus {
+                outline: none;
+            }
+
+            .btn:focus {
+                outline: none;
+            }
+			
+			.bg {width:600px;margin-top:50px;margin-bottom:50px;}
+			.wbk {width:200px;}
+
+            .table th, .table td {
+             /*text-align: center;*/
+             vertical-align: middle!important;
+             }
+        </style>
+	<script type="text/javascript" src="../assets/js/jquery-3.0.0.min.js" ></script>
+	<script type="text/javascript" src="../assets/js/bootstrap/bootstrap.min.js" ></script>
+        <script type="text/javascript">
+            $(function($) {
+				
+                //点击发送验证码按钮
+                $('#btn1').on('click', function() {
+                    var sjh = $("#phone").val();
+					 var tsxx=checkphone(sjh); //检查手机号是否正确
+					if(tsxx!="") 
+					   $("#info1").html("<font color='white'>"+tsxx+"</font>");
+					else
+					   {
+					   $("#info1").html("<font color='transparent'>"+tsxx+"</font>");
+                       getData(sjh);
+					   }
+                });
+				
+				//点击确认按钮
+				$('#btn2').on('click',function(){
+					var input=$("#getCity").val();
+					var yzmzq=checkcode(input);
+					if(yzmzq!="")
+					{
+						$("#info2").html("<font color='white'>"+yzmzq+"</font>");
+					}
+					else
+						window.location.href = "./createaccount_info.html";
+				}
+				)
+	  
+	    //当鼠标定位到手机号码输入框时（输入框得到焦点时）
+	      $("#phone").focus(function(){   
+			   $("#info1").html("<font color='transparent'>"+yzmzq+"</font>");
+			 });
+		
+		//当手机号码输入完成时（输入框失去焦点时）	 
+		 $("#phone").blur(function(){   
+			 			  var sjh = $('#phone').val();
+			 			  var tsxx=checkphone(sjh); //检查手机号是否正确
+			 			  if(tsxx!="") 
+			 			     $("#info1").html("<font color='white'>"+tsxx+"</font>");
+			 			  else
+			 			      $("#info1").html("<font color='transparent'>"+""+"</font>");
+			 			 });
+          
+             //检查手机号是否正确
+            function checkphone(phone){  
+				var message = "";
+				var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(17[0-9]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/;
+				if(phone ==""){
+				message = "手机号码不能为空！";
+				}else if(phone.length !=11){
+				message = "请输入有效的手机号码！";
+				}else if(!myreg.test(phone)){
+				message = "请输入有效的手机号码！";
+				}
+				
+				return message;
+			}
+
+				var rightcode=getyzm(6);
+
+
+           //核心函数：调用短信接口API
+                function getData(sjh) {
+					var yzm="你的短信验证码是:"+rightcode;   //验证码
+					var url_add="http://health.sctu.edu.cn:56666/send/SendMessage.aspx";   //短信接口
+					$.get(url_add, {    //下面四个参数为所提供的短信接口所需的4个参数
+								phone:sjh,
+								content:yzm,
+								username: "message_test",
+								password:"message_2022_!"
+							}, function(data) {
+								if(data.status=="success") $("#info3").html("<font color='white'>发送成功</font>");
+								else $("#info3").html("<font color='red'>发送失败，请重新发送</font>");
+								//注意：这里的data是json对象，status是json对象里的一个key，data.status就是获取status对应的值。		
+							}, "json");
+					
+                }
+				
+				function getyzm(ws)   //产生短信验证码的函数，ws代表要产生几位数的验证码
+				{
+					var num="";//随机数
+					        for (let i=0; i<ws;i++){
+					            //ws代表要产生的验证码的位数
+					            //Math.random 0~1
+					            //乘10变为0~10
+					            //向下取整0~9
+					       var j=   Math.floor(Math.random()*10);
+					       num+=j;
+					        }
+					        return num;
+					
+				}
+				
+				function checkcode(input)
+				{
+					if(input!=rightcode)
+						return "验证码错误";
+					else
+						return "";
+				} 
+				
+				
+				
+            })
+        </script>
+    </head>
+    <body>
+		<nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+		  <div class="container">
+		    <a class="navbar-brand" href="./docs/homepage.html"><strong>Remember</strong>Me</a>
+		    <button class="navbar-toggler" type="button" data-action="offcanvas-open" data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+		      <ul class="navbar-nav ml-auto align-items-lg-center">
+		        <h6 class="dropdown-header font-weight-600 d-lg-none px-0">Menu</h6>
+		        <li class="nav-item ">
+		          <a class="nav-link" href="./individual.html">个人星球</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="./topic.html">专题星球</a>
+		        </li>
+							<li class="nav-item">
+							  <a class="nav-link" href="./user.html">用户中心</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" href="./about.html">关于我们</a>
+							</li>
+		        <div class="dropdown-divider d-lg-none my-4"></div>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		<main class="main">
+		  <section class="py-xl bg-cover bg-size--cover" style="background-image: url('../assets/images/bg.png')">
+			  <div class="container d-flex align-items-center no-padding">
+			    <div class="col">
+			      <div class="row justify-content-center">
+			        <div class="col-lg-4">
+			          <div class="card bg-primary text-white justify-content-center " style="width: 25rem;" >
+			            <div class="card-body">
+							<!--
+			              <button type="button" class="btn btn-light btn-zoom--hover mb-2">
+			              	<a href="./signin.html">
+			                <span class="btn-inner--icon"><i class="fas fa-arrow-left black1 " ></i></span></a>
+			              </button>-->
+			              <span class="clearfix"></span>
+			              <img src="../assets/images/lp_cover.png" style="width: 90px">
+			              <h4 class="heading h3 text-white pt-2 pb-4 text-center">手机号验证</h4>
+			              <form class="form-primary">
+							  <div class="container">
+							  	
+							  	<!--<table class="table bg " align="center">-->
+							  	  
+							  	     
+							  	     <div class="container">
+							  			  <input type="text" class="form-control wbk float-lg-left"  placeholder="请输入手机号码" id="phone">
+							  		  
+									  <button class="btn btn-default float-right" type="button" id="btn1">获取</button>
+									  <h1>                           </h1>
+									  <label id="info10" style="color:transparent">abcd</label>
+									  <label id="info1" style="color:transparent">abcd</label>
+									  <h1>                           </h1>
+							  	     </div>
+									 
+									 <div class="container">
+							          <input type="text" class="form-control wbk float-left" placeholder="请输入短信验证码" id="getCity" />
+									   <button class="btn btn-default float-right" type="button" id="btn2">确认</button>
+							  			  <label id="info2" style="color:transparent">ABCD</label>
+										<label id="info3" style="color:#aaa"></label>
+							  		    
+							  		</div>
+									 
+							  	
+							  
+
+      
+			
+          
+        </div>
+ 
+    </body>
+</html>

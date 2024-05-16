@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Remember Me</title>
+		<link rel='stylesheet' href='../assets/css/css-pro-layout.css'>
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
+		<link rel="stylesheet" href="../assets/css/sideBar.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+		<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+		<link type="text/css" href="../assets/css/demo.css" rel="stylesheet">
+		<link rel="stylesheet" href="../assets/css/uploadImg.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/register.css">
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_1805932_ysrcp4y0uy9.css">
+	</head>
+	<body>
+		<div class="layout has-sidebar fixed-sidebar fixed-header"
+			style="background-image:url('../assets/images/bg.png');">
+			<aside id="sidebar" class="sidebar break-point-lg has-bg-image">
+				<div class="image-wrapper">
+					<img src="../assets/images/bg.png" alt="sidebar background">
+				</div>
+				<div class="sidebar-layout">
+					<div class="sidebar-header">
+						<a href="homepage.html">
+							<span><img src="../assets/images/logo_3.png" width="50px""></span>
+						   </a>
+                    </div>
+                    <div class=" sidebar-content">
+								<nav class="menu open-current-submenu">
+									<ul>
+										<li class="menu-item">
+											<a href="create_bg.html"><span class="menu-icon"><i
+														class="ri-landscape-fill"></i></span><span
+													class="menu-title">创建背景</span></a>
+											<a href="create_star.html"><span class="menu-icon"><i
+														class="ri-earth-fill"></i></span><span
+													class="menu-title">创建星球</span></a>
+											<a href="complete_info.html"><span class="menu-icon"><i
+														class="ri-account-circle-fill"></i></span><span
+													class="menu-title">完善信息</span></a>
+
+										</li>
+									</ul>
+								</nav>
+					</div>
+					<div class="sidebar-footer">
+						<span>每个人都有一颗属于自己的星星</span>
+					</div>
+				</div>
+			</aside>
+			<div id="overlay" class="overlay"></div>
+			<div class="layout">
+				<nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+					<div class="container">
+						<a class="navbar-brand" id="btn-collapse" href="#"><i class="ri-menu-line ri-xl"></i></a><a
+							id="btn-toggle" href="#" class="sidebar-toggler break-point-lg"><i
+								class="ri-menu-line ri-xl"></i></a>
+						<button class="navbar-toggler" type="button" data-action="offcanvas-open"
+							data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+							<ul class="navbar-nav ml-auto align-items-lg-center">
+								<li class="nav-item ">
+									<a class="nav-link active" href="./individual.html">个人星球</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./topic.html">专题星球</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./about.html">关于我们</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./user.html"><span><img src="../assets/images/lp-4.jpg"
+												width="30px" class="rounded-circle"></span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="container">
+					<div class="rg_layout">
+						<div class="rg_left">
+							<div class="re_form">
+								<form action="#" method="post">
+									<table>
+										<tr>
+											<td class="td_left">
+												<label for="username">姓名</label>
+											</td>
+											<td class="td_right">
+												<input type="text" name="username" id="cname">
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												性别
+											</td>
+											<td class="td_right">
+												<input type="radio" name="gender" value="male">男 <input type="radio"
+													name="gender" value="female">女
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												<label for="email">民族</label>
+											</td>
+											<td class="td_right">
+												<input type="email" name="email" id="nation">
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												<label for="name">籍贯</label>
+											</td>
+											<td class="td_right">
+												<input type="text" name="name" id="native_place">
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												<label for="phone">星座</label>
+											</td>
+											<td class="td_right">
+												<select class="form-control form-control-sm" id="constellation">
+													<option>Capricorn</option>
+													<option>Aquarius</option>
+													<option>Pisces</option>
+													<option>Aries</option>
+													<option>Taurus</option>
+													<option>Gemini</option>
+													<option>Cancer</option>
+													<option>Leo</option>
+													<option>Virgo</option>
+													<option>Libra</option>
+													<option>Scorpio</option>
+													<option>Sagiffarius</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												<label for="birthday">出生日期</label>
+											</td>
+											<td class="td_right">
+												<input type="date" name="birthday" id="birth">
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												<label for="birthday">死亡日期</label>
+											</td>
+											<td class="td_right">
+												<input type="date" name="birthday" id="death">
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												<label for="username">生平经历</label>
+											</td>
+											<td class="td_right">
+												<textarea id="username" rows="3" id="lifetime"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												<label for="phone">墓志铭</label>
+											</td>
+											<td class="td_right">
+												<input type="text" name="phone" id="epitaph">
+											</td>
+										</tr>
+										<tr>
+											<td class="td_left">
+												是否公开
+											</td>
+											<td class="td_right">
+												<input type="radio" name="public" value="male">是 <input type="radio"
+													name="public" value="female">否
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" align="center">
+												<a href="deceased.html">
+													<button type="button"
+														class="btn btn-outline-dark btn-sm float-md-right">确认创建</button>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+						</div>
+						<div class="rg_right">
+							<div class="re_form">
+								<form action="#" method="post">
+									<div class="row">
+										<div class="upload-content">
+											<div class="content-img">
+												<ul class="content-img-list"></ul>
+												<div class="file">
+													<i class="gcl gcladd"></i>
+													<input type="file" name="file" accept="image/*" id="upload"
+														multiple>
+												</div>
+											</div>
+											<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+												aria-labelledby="myLargeModalLabel">
+												<div class="modal-dialog modal-lg" role="document">
+													<div class="modal-content">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay"></div>
+		</div>
+		</div>
+		<script src='../assets/js/popper.min.js'></script>
+		<script src="../assets/js/sideBar.js"></script>
+		<!-- Core -->
+		<script src="../assets/vendor/jquery/jquery.min.js"></script>
+		<script src="../assets/vendor/popper/popper.min.js"></script>
+		<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+		<!-- FontAwesome 5 -->
+		<script src="../assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+		<!-- Page plugins -->
+		<script src="../assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+		<script src="../assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+		<script src="../assets/vendor/input-mask/input-mask.min.js"></script>
+		<script src="../assets/vendor/nouislider/js/nouislider.min.js"></script>
+		<script src="../assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+		<!-- Theme JS -->
+		<script src="../assets/js/theme.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'></script>
+		<script src="../assets/js/uploadImg.js"></script>
+	</body>
+</html>
+<script>
+	document.querySelector("button").onclick = function() {
+		var xhr = new XMLHttpRequest();
+		xhr.open('post', '../api/complete_info/complete');
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		var cname = document.getElementById("cname").textContent;
+		var gender = $("input[name='gender']:checked").val();
+		var nation = document.getElementById("nation").textContent;
+		var native_place = document.getElementById("native_place").textContent;
+		var constellation = $("#constellation option:selected").text();
+		var birth = document.getElementById("birth");
+		var death = document.getElementById("death");
+		var lifetime = document.getElementById("lifetime").textContent;
+		var epitaph = document.getElementById("epitaph").textContent;
+		var public = 0;
+		if ($("input[name='public']:checked").val() == "是") {
+			public = 1；
+		}
+		var arr =
+			'{"cname":cname,"gender":gender,"nation":nation,"native_place":native_place;"birth":birth,"death":death,"lifetime":lifetime,"epitaph":epitaph,"public":publuc}'
+		var obj = JSON.parse(arr);
+		xhr.send(obj);
+	}
+</script>

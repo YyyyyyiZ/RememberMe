@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            html透明样式注册表单界面
+        </title>
+        <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
+				<link rel="stylesheet" href="../assets/css/uploadImg.css">
+    </head>
+    <body>
+        <div class="rg_layout">
+            <div class="rg_left">
+							<div class="re_form">
+							    <form action="#" method="post">
+							        <table>
+							            <tr>
+							                <td class="td_left">
+							                    <label for="username">姓名</label>
+							                </td>
+							                <td class="td_right">
+							                    <input type="text" name="username" id="username" >
+							                </td>
+							            </tr>
+							            <tr>
+							                <td class="td_left">
+							                    性别
+							                </td>
+							                <td class="td_right">
+							                    <input type="radio" name="gender" value="male">男 <input type="radio" name="gender" value="female">女
+							                </td>
+							            </tr>
+							            <tr>
+							                <td class="td_left">
+							                    <label for="email">民族</label>
+							                </td>
+							                <td class="td_right">
+							                    <input type="email" name="email" id="email">
+							                </td>
+							            </tr>
+							            <tr>
+							                <td class="td_left">
+							                    <label for="name">籍贯</label>
+							                </td>
+							                <td class="td_right">
+							                    <input type="text" name="name" id="name">
+							                </td>
+							            </tr>
+							            <tr>
+							                <td class="td_left">
+							                    <label for="phone">社交账号</label>
+							                </td>
+							                <td class="td_right">
+							                    <input type="text" name="phone" id="phone">
+							                </td>
+							            </tr>
+							            
+							            <tr>
+							                <td class="td_left">
+							                    <label for="birthday">出生日期</label>
+							                </td>
+							                <td class="td_right">
+							                    <input type="date" name="birthday" id="birthday">
+							                </td>
+							            </tr>
+													<tr>
+													    <td class="td_left">
+													        <label for="birthday">死亡日期</label>
+													    </td>
+													    <td class="td_right">
+													        <input type="date" name="birthday" id="birthday">
+													    </td>
+													</tr>
+													<tr>
+													    <td class="td_left">
+													        <label for="username">生平经历</label>
+													    </td>
+													    <td class="td_right">
+																<textarea  id="username"  rows="3"></textarea>
+													        <!-- <input type="text" name="username" id="username" placeholder="请输入账号"> -->
+													    </td>
+													</tr>
+							            <tr>
+							                <td class="td_left">
+							                    <label for="phone">墓志铭</label>
+							                </td>
+							                <td class="td_right">
+							                    <input type="text" name="phone" id="phone">
+							                </td>
+							            </tr>
+							            <tr>
+							                <td colspan="2" align="center">
+							                    <input type="submit" id="btn_sub" value="确认创建">
+							                </td>
+							            </tr>
+							        </table>
+							    </form>
+							</div>
+
+            </div>
+            <div class="rg_right">
+                <div class="re_form">
+                    <form action="#" method="post">
+
+                            
+														<div class="row">
+															<div class="upload-content">
+															    <div class="content-img">
+															        <ul class="content-img-list"></ul>
+															        <div class="file">
+															            <i class="gcl gcladd"></i>
+															            <input type="file" name="file" accept="image/*" id="upload" multiple>
+															        </div>
+															    </div>
+															    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+															        <div class="modal-dialog modal-lg" role="document">
+															            <div class="modal-content">
+															            </div>
+															        </div>
+															    </div>
+															</div>
+														</div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+				<script src="../assets/vendor/jquery/jquery.min.js"></script>
+				<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+				<script src="../assets/js/uploadImg.js"></script>
+    </body>
+</html>
